@@ -210,6 +210,8 @@ public abstract class BleScanPresenter implements BluetoothAdapter.LeScanCallbac
             @Override
             public void run() {
                 onScanFinished(mBleDeviceList);
+                // 释放资源
+                mBleScanPresenterImp = null ;
             }
         });
     }
